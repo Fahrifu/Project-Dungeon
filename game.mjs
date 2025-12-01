@@ -330,6 +330,13 @@ function drawSplashScreen() {
     ctx.restore();
 }
 
+function draw() {
+    if (gameState === GAME_STATES.init) {
+        drawSplashScreen();
+        return;
+    }
+}
+
 //#endregion
 
 function drawHUD(ctx) {
