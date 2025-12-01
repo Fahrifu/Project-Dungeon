@@ -225,6 +225,12 @@ function update() {
             return;
         }
 
+        splashCounter++;
+        if (splashCounter > SPLASH_FRAMES) {
+            gameState = GAME_STATES.menu;
+        }
+        return;
+
     }
 }
 
