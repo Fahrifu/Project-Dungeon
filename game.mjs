@@ -216,7 +216,17 @@ function updateMenu() {
     }
 }
 
+function update() {
+    
+    if (gameState === GAME_STATES.init) {
 
+        if (KEYS.ArrowUp || KEYS.ArrowDown || KEYS.ArrowLeft || KEYS.ArrowRight || KEYS.Enter) {
+            gameState = GAME_STATES.menu;
+            return;
+        }
+
+    }
+}
 
 function draw() {
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
