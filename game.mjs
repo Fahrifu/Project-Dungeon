@@ -249,7 +249,10 @@ function update() {
         return;
     }
 
-    
+    if (gameState === GAME_STATES.play) {
+        updatePlayState();
+        return;
+    }
 }
 
 function draw() {
