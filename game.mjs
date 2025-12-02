@@ -284,6 +284,7 @@ async function updatePlayState() {
         isGameOver = true;
     }
 
+    updateActiveEffects();
     updateComments();
 
 }

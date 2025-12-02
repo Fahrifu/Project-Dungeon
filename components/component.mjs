@@ -12,7 +12,8 @@ const COMPONENTS = {
     zombie: "Z",
     key: "K",
     potion: "P",
-    door: "D"
+    door: "D",
+    trap: "R"
 }
 
 function createComponent(data) {

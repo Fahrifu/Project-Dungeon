@@ -102,6 +102,16 @@ const TILES = {
             let sy = (row * SPRITES.monsters.dim) + SPRITES.monsters.offsetY;
             ctx.drawImage(SPRITES.monsters.image, sx, sy, SPRITES.monsters.dim, SPRITES.monsters.dim, x, y, dim, dim);
         }
+    },
+    "R": {
+        symbole: "R",
+        draw: (ctx, x, y, dim) => {
+            let col = 3;
+            let row = 0;
+            let sx = (col * SPRITES.items.dim) + SPRITES.items.offsetX;
+            let sy = (row * SPRITES.items.dim) + SPRITES.items.offsetY;
+            ctx.drawImage(SPRITES.items.image, sx, sy, SPRITES.items.dim, SPRITES.items.dim, x, y, dim, dim);
+        }
     }
 }
 
