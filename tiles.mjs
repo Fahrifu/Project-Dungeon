@@ -85,7 +85,7 @@ const TILES = {
             ctx.drawImage(SPRITES.monsters.image, sx, sy, SPRITES.monsters.dim, SPRITES.monsters.dim, x, y, dim, dim);
         }
     },
-    "F": {
+    "F": { // Healer
         symbole: "F", draw: (ctx, x, y, dim) => {
             let col = 1;
             let row = 0;
@@ -94,7 +94,7 @@ const TILES = {
             ctx.drawImage(SPRITES.monsters.image, sx, sy, SPRITES.monsters.dim, SPRITES.monsters.dim, x, y, dim, dim);
         }
     },
-    "G": {
+    "G": { // Key Thief
         symbole: "G", draw: (ctx, x, y, dim) => {
             let col = 2;
             let row = 0;

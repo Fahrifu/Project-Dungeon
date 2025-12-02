@@ -195,6 +195,18 @@ async function updatePlayState() {
                 player[component.attribute] += component.effect;
                 addComment("You drank " + component.name + " effect is " + component.effect);
             }
+            else if (component.symbole == "F"){
+                const before = player.health;
+                const HEAL_AMOUNT = 3;
+                player.health = Math.min(Player.MAX_HEALTH, player.health + HEAL_AMOUNT);
+                const healed = player.health - before;
+
+                if (healed > 0) {
+                    addComment("The healer tends your wounds. +" + healed + " health");
+                } else {
+                    addComment("The healer nods. You are already in perfect health");
+                }
+            }
             else {
                 keep.push(component)
                 tr = player.row;
