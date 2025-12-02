@@ -120,7 +120,7 @@ function loop() {
     draw();
     requestAnimationFrame(loop);
 }
-
+// #region Update
 async function updatePlayState() {
 
     if (isGameOver) {
@@ -356,6 +356,9 @@ function update() {
     }
 }
 
+// #endregion
+
+// #region Draw
 function draw() {
 
     if (gameState === GAME_STATES.init) {
@@ -528,7 +531,7 @@ function drawIdleScreen() {
     ctx.restore();
 }
 
-//#endregion
+
 
 function drawHUD(ctx) {
     let healthDisplay = ["❤️", "❤️", "💛", "💛", "💛", "💚", "💚", "💚", "💚", "💚"].slice(0, player.health).join("");
@@ -536,6 +539,7 @@ function drawHUD(ctx) {
     ctx.fillText(healthDisplay, DIMENSIONS.padding, DIMENSIONS.padding * 0.75);
 
 }
+//#endregion
 
 //#region utility functions
 
