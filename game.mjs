@@ -60,6 +60,13 @@ const MENU_ITEMS = [
     "Quit"
 ];
 
+let cameraX = 0;
+let cameraY = 0;
+
+let VIEW_WIDTH = 15;
+let VIEW_HEIGHT = 12;
+
+
 //#region GAME ENGINE
 
 async function init(levelIndex = 0) {
@@ -358,6 +365,7 @@ async function updatePlayState() {
     }
 
     updateActiveEffects();
+    updateCamera();
     updateComments();
 
 }
@@ -434,6 +442,14 @@ function updateActiveEffects() {
     }
 
     activeEffects = remaining;
+}
+
+function updateCamera() {
+    cameraX = (player.col * _td) - (VIEW_WIDTH * _td / 2);
+    cameraY = (player.row * _td) - (VIEW_HEIGHT * _td / 2);
+
+    cameraX = Math.max(0, Math.min(cameraX, _width - VIEW_WIDTH * _td));
+    cameraY = Math.max(0, Math.min(cameraY, _height - VIEW_HEIGHT * _td));
 }
 
 function update() {
